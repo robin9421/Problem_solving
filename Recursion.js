@@ -44,3 +44,17 @@
 //     return
 // return
           
+// ----------------------------------------------------------------------------
+
+// ------------------String Reversal--------------------------
+const stringReversal = (strng) => {
+    if(strng == ""){
+        return "";
+    }
+    return stringReversal(strng.substring(1)) + strng.charAt(0);
+}
+
+res = stringReversal("Robin");
+console.log(res)
+
+// ---------------------------------------------------------------------------------
