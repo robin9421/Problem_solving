@@ -58,3 +58,20 @@
 // console.log(res)
 
 // ---------------------------------------------------------------------------------
+
+// --------------------Palindrome-------------------------
+// const isPalindrome = (strng) => {
+//     if(strng.length == 0 || strng.length == 1){
+//         return true;
+//     }
+//     if(strng.charAt(0) == strng.charAt(strng.length - 1))
+//     {
+//         return isPalindrome(strng.substring(1,strng.length-1));
+//     }
+//     return false;
+// }
+
+// res = isPalindrome("AKA");
+// console.log(res)
+
+// --------------------------------------------------------------------------------------
