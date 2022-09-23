@@ -86,10 +86,10 @@
 //     // console.log(conversion);
 //     result = conversion + result;
     
-//     return DecimalToBinary(number/2, result);
+//     return DecimalToBinary(parseInt(number/2), result);
 // }
 
-// res = DecimalToBinary(233, "");
+// res = DecimalToBinary(520, "");
 // console.log(res);
 
 // -------------------------------------------------------------------------------------
