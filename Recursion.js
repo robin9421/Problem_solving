@@ -75,3 +75,21 @@
 // console.log(res)
 
 // --------------------------------------------------------------------------------------
+
+
+// ---------------------DecimalToBinary---------------------
+// const DecimalToBinary = (number, result) => {
+//     if(number == 0) {
+//         return result;
+//     }
+//     conversion = (number % 2).toString()
+//     // console.log(conversion);
+//     result = conversion + result;
+    
+//     return DecimalToBinary(number/2, result);
+// }
+
+// res = DecimalToBinary(233, "");
+// console.log(res);
+
+// -------------------------------------------------------------------------------------
