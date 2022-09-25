@@ -93,3 +93,37 @@
 // console.log(res);
 
 // -------------------------------------------------------------------------------------
+
+// ---------------------Fibonacci (Non optimized)---------------)
+// const Fibonacci = (num) => {
+//     if(num == 0 || num == 1)
+//     {
+//         return num;
+//     }
+//     return Fibonacci(num-1) + Fibonacci(num-2);
+// }
+
+// res = Fibonacci(6);
+// console.log(res);
+
+// ---------------------------------------------------------------------------------------
+
+// -------------------Merge two sorted lists------------------------
+// var mergeTwoLists = function(list1, list2) {
+//     if(list1 == null){
+//         return list2;
+//     }
+//     if(list2 == null){
+//         return list1;
+//     }
+//     if(list1.val < list2.val){
+//         list1.next = mergeTwoLists(list1.next, list2);
+//         return list1;
+//     }
+//     else {
+//         list2.next = mergeTwoLists(list1, list2.next);
+//         return list2;
+//     }
+// };
+
+// ---------------------------------------------------------------------------------------------
