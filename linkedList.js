@@ -117,4 +117,56 @@
 
 // breadthFirstPrint(graph, 'a');
 
-// -------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------------------------
+
+// -------------------HAS PATH USING BFS----------------------------------
+// const breadthFirstHasPath = (graph, source, dest) => {
+//     const queue = [source];
+
+//     while(queue.length > 0){
+//         const current = queue.shift(); //removes first elements from array
+//         if (current == dest) return true;
+
+//         for(let neighbor of graph[current]){
+//             queue.push(neighbor);
+//         }
+//     }
+//     return false;
+// };
+
+// const graph = {
+//     a: ['c', 'b'],
+//     b: ['d'],
+//     c: ['e'],
+//     d: ['f'],
+//     e: [],
+//     f: []
+// };
+
+// breadthFirstHasPath(graph, 'a', 'f');
+
+// ---------------------------------------------------------------------------------------------------------
+
+// >>----------------------HAS PATH USING DFS RECURSIVE METHOD---------------------------
+// const depthFirstHasPath = (graph, source) => {
+//     if (source == dest) return true;
+
+//     for(let neighbor of graph[source]){
+//         if (depthFirstHasPath(graph, neighbor, dest) == true) {
+//             return true;
+//         }
+//     }
+//     return false;
+// };
+
+// const graph = {
+//     a: ['c', 'b'],
+//     b: ['d'],
+//     c: ['e'],
+//     d: ['f'],
+//     e: [],
+//     f: []
+// };
+
+// depthFirstHasPath(graph, 'a', 'f);
+// ---------------------------------------------------------------------------------------------------------
