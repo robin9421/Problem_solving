@@ -170,3 +170,90 @@
 
 // depthFirstHasPath(graph, 'a', 'f);
 // ---------------------------------------------------------------------------------------------------------
+
+// ------------------------Node search in a cyclic graph (DFS)---------------------------
+// const searchNodeUndirectedGraph = (edges, nodeA, nodeB) => {
+//     const graph = buildGraph(edges);
+//     return hasPath(graph, nodeA, nodeB, new Set());
+// }
+
+// const buildGraph = (edges) => {
+//     const graph = {};
+
+//     for (let edge of edges){
+//         const[a,b] = edge;
+//         if(!(a in graph)) graph[a] = [];
+//         if(!(b in graph)) graph[b] = [];
+//         graph[a].push(b);
+//         graph[b].push(a);
+//     }
+//     return graph;
+// }
+
+// const hasPath = (graph, source, destination, visited) => {
+//     if(source == destination) {
+//         return true;
+//     }
+
+//     if(visited.has(source)) return true;
+
+//     visited.add(source);
+
+//     for(let neighbor of graph[source]){
+//         if(hasPath(graph, neighbor, destination, visited) == true) return true;
+//     }
+//     return false;
+// }
+
+
+// const edges = [
+//     ['i', 'j'],
+//     ['k', 'i'],
+//     ['m', 'k'],
+//     ['k', 'l'],
+//     ['o', 'n'],
+// ];
+
+// const result = searchNodeUndirectedGraph(edges, 'j', 'm');
+// console.log(result);
+
+// ----------------------------------------------------------------------------------------------------------------------------------
+
+// ---------------------counting connected components----------------------------
+const connectedComponentsCount = (graph) => {
+    const visited = new Set();
+    let count = 0;
+     
+    for (let node in graph) {
+        console.log(visited);
+        if(explore(graph, node, visited) == true) {
+            count += 1;
+        }
+    }
+
+    return count;
+};
+
+const explore = (graph, current, visited) => {
+    if (visited.has(String(current))) return false;
+
+    visited.add(String(current));
+
+    for(let neighbor of graph[current]){
+        explore(graph, neighbor, visited);
+    }
+
+    return true;
+};
+
+const res = connectedComponentsCount({
+    0: [8, 1, 5],
+    1: [0],
+    5: [0, 8],
+    8: [0, 5],
+    2: [3, 4],
+    3: [2, 4],
+    4: [3, 2]
+});
+
+// console.log(res)
