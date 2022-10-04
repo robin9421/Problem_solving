@@ -148,7 +148,7 @@
 // ---------------------------------------------------------------------------------------------------------
 
 // >>----------------------HAS PATH USING DFS RECURSIVE METHOD---------------------------
-// const depthFirstHasPath = (graph, source) => {
+// const depthFirstHasPath = (graph, source, dest) => {
 //     if (source == dest) return true;
 
 //     for(let neighbor of graph[source]){
